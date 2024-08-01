@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAGR Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="calculator">
+    <div class="tabs">
+        <button onclick="showTab('cagr')">Calculate CAGR</button>
+        <button onclick="showTab('futureValue')">Predict Future Value</button>
+        <button onclick="showTab('yearsToDouble')">Years to Double</button>
+    </div>
+    
+    <div id="cagr" class="tab-content">
+        <h2>Calculate CAGR</h2>
+        <label for="initialValue">Initial Value:</label>
+        <input type="number" id="initialValue" step="0.01">
+        
+        <label for="finalValue">Final Value:</label>
+        <input type="number" id="finalValue" step="0.01">
+        
+        <label for="years">Number of Years:</label>
+        <input type="number" id="years">
+        
+        <button onclick="calculateCAGR()">Calculate CAGR</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <div id="futureValue" class="tab-content">
+        <h2>Predict Future Value</h2>
+        <label for="futureInitialValue">Initial Value:</label>
+        <input type="number" id="futureInitialValue" step="0.01">
+
+        <label for="expectedCAGR">Expected CAGR (%):</label>
+        <input type="number" id="expectedCAGR" step="0.01">
+
+        <label for="futureYears">Number of Years:</label>
+        <input type="number" id="futureYears">
+
+        <button onclick="calculateFutureValue()">Calculate Future Value</button>
+
+        <div id="futureResult"></div>
+    </div>
+
+    <div id="yearsToDouble" class="tab-content">
+        <h2>Years to Double</h2>
+        
+        <label for="doubleCAGR">Expected CAGR (%):</label>
+        <input type="number" id="doubleCAGR" step="0.01">
+
+        <button onclick="calculateYearsToDouble()">Calculate Years to Double</button>
+
+        <div id="doubleResult"></div>
+    </div>
+    <hr>
+    <p>Developed by: Sudhir</p>    
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
