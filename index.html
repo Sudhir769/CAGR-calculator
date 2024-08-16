@@ -11,6 +11,7 @@
     <div class="tabs">
         <button onclick="showTab('cagr')">Calculate CAGR</button>
         <button onclick="showTab('futureValue')">Predict Future Value</button>
+        <button onclick="showTab('percentageChange')">Percentage Change</button>
         <button onclick="showTab('yearsToDouble')">Years to Double</button>
     </div>
     
@@ -44,6 +45,20 @@
         <button onclick="calculateFutureValue()">Calculate Future Value</button>
 
         <div id="futureResult"></div>
+    </div>
+
+    <div id="percentageChange" class="tab-content">
+        <h2>Percentage Change</h2>
+
+        <label for="initialValueChange">Initial Value:</label>
+        <input type="number" id="initialValueChange" step="0.01">
+
+        <label for="finalValueChange">Final Value:</label>
+        <input type="number" id="finalValueChange" step="0.01">
+
+        <button onclick="calculatePercentageChange()">Calculate Percentage Change</button>
+
+        <div id="percentageChangeResult"></div>
     </div>
 
     <div id="yearsToDouble" class="tab-content">

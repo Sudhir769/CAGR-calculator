@@ -61,3 +61,12 @@ button:hover {
     display: block;
 }
 
+.tab-content {
+    display: none;
+    padding-top: 20px; /* Add padding to separate the output from inputs */
+}
+
+#percentageChangeResult {
+    margin-top: 10px;
+    font-weight: bold;
+}

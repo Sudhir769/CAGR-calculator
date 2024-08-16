@@ -63,3 +63,30 @@ function calculateYearsToDouble() {
     )} years to double the initial amount.`;
   }
 }
+
+function calculatePercentageChange() {
+  const initialValueChange = parseFloat(
+    document.getElementById("initialValueChange").value
+  );
+  const finalValueChange = parseFloat(
+    document.getElementById("finalValueChange").value
+  );
+
+  if (initialValueChange <= 0 || finalValueChange <= 0) {
+    document.getElementById("percentageChangeResult").innerText =
+      "Please enter valid values.";
+  } else {
+    const percentageChange =
+      ((finalValueChange - initialValueChange) / initialValueChange) * 100;
+    const resultElement = document.getElementById("percentageChangeResult");
+    resultElement.innerText = `Percentage Change: ${percentageChange.toFixed(
+      2
+    )}% (${finalValueChange - initialValueChange})`;
+
+    if (percentageChange > 0) {
+      resultElement.style.color = "green";
+    } else if (percentageChange < 0) {
+      resultElement.style.color = "red";
+    }
+  }
+}
