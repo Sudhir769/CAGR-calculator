@@ -13,6 +13,7 @@
         <button onclick="showTab('futureValue')">Predict Future Value</button>
         <button onclick="showTab('percentageChange')">Percentage Change</button>
         <button onclick="showTab('yearsToDouble')">Years to Double</button>
+        <button onclick="showTab('basicCalculator')">Basic Calculator</button>
     </div>
     
     <div id="cagr" class="tab-content">
@@ -71,6 +72,30 @@
 
         <div id="doubleResult"></div>
     </div>
+
+    <div id="basicCalculator" class="tab-content">
+            <h2>Basic Calculator</h2>
+            <input type="text" id="calcInput" placeholder="0" disabled>
+            <div class="calc-buttons">
+                <button onclick="appendToCalc('1')">1</button>
+                <button onclick="appendToCalc('2')">2</button>
+                <button onclick="appendToCalc('3')">3</button>
+                <button onclick="appendToCalc('+')">+</button>
+                <button onclick="appendToCalc('4')">4</button>
+                <button onclick="appendToCalc('5')">5</button>
+                <button onclick="appendToCalc('6')">6</button>
+                <button onclick="appendToCalc('-')">-</button>
+                <button onclick="appendToCalc('7')">7</button>
+                <button onclick="appendToCalc('8')">8</button>
+                <button onclick="appendToCalc('9')">9</button>
+                <button onclick="appendToCalc('*')">*</button>
+                <button onclick="appendToCalc('0')">0</button>
+                <button onclick="calculateResult()">=</button>
+                <button onclick="clearCalc()">C</button>
+                <button onclick="appendToCalc('/')">/</button>
+            </div>
+        </div>
+
     <hr>
     <p>Developed by: Sudhir</p>    
 </div>

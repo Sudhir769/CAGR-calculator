@@ -90,3 +90,41 @@ function calculatePercentageChange() {
     }
   }
 }
+
+//Basic Calculator
+
+window.onload = function () {
+  showTab("cagr"); // Show the CAGR tab when the page loads
+};
+
+function showTab(tabName) {
+  const tabs = document.getElementsByClassName("tab-content"); // Get all tab content
+  // Hide all tabs
+  for (let tab of tabs) {
+    console.log(tab);
+    
+    tab.style.display = "none";
+
+  }
+  // Show the selected tab
+  document.getElementById(tabName).style.display = "block";
+}
+
+function appendToCalc(value) {
+  const input = document.getElementById("calcInput");
+  input.value += value;
+}
+
+function calculateResult() {
+  const input = document.getElementById("calcInput");
+  try {
+    input.value = eval(input.value) || "";
+  } catch (e) {
+    input.value = "Error";
+  }
+}
+
+function clearCalc() {
+  const input = document.getElementById("calcInput");
+  input.value = "";
+}
